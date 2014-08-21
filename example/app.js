@@ -4,7 +4,7 @@ app.controller( 'Main', main );
 main.$inject = ['$scope'];
 function main ( scope ) {
   scope.nodes = {
-   "name": "flare",
+   "name": "",
    "children": [
     {
      "name": "analytics",
