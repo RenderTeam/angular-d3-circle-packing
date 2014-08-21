@@ -34,7 +34,9 @@ module.exports = function ( grunt ) {
         options: {
           cleancss: true
         },
-        files: {}
+        files: {
+          'build/css/angular-d3-hierarchy-pack.css': ['src/less/angular-d3-hierarchy-pack.less']
+        }
       }
     },
     uglify: {
