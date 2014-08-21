@@ -1,0 +1,29 @@
+{
+  "name": "angular-d3-hierarchy-pack",
+  "version": "0.1.0",
+  "homepage": "https://github.com/RenderTeam/d3-hierachy-pack",
+  "authors": [
+    "Ardroz <darr.0725@gmail.com>",
+    "Chemonky <luricardorod@gmail.com>"
+  ],
+  "description": "Angular d3 hierarchy pack",
+  "main": "angular-d3-hierarchy-pack.js",
+  "keywords": [
+    "angular",
+    "d3",
+    "hierarchy"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.18",
+    "jquery": "~2.1.1",
+    "d3": "~3.4.11"
+  }
+}
