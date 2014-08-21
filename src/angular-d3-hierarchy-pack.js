@@ -25,14 +25,14 @@ function hierarchyPack () {
             .duration(d3.event.altKey ? 7500 : 750);
 
         t.selectAll("circle")
-            .attr("cx", function(d) { return x(d.x); })
-            .attr("cy", function(d) { return y(d.y); })
-            .attr("r", function(d) { return k * d.r; });
+          .attr("cx", function(d) { return x(d.x); })
+          .attr("cy", function(d) { return y(d.y); })
+          .attr("r", function(d) { return k * d.r; });
 
         t.selectAll("text")
-            .attr("x", function(d) { return x(d.x); })
-            .attr("y", function(d) { return y(d.y); })
-            .style("opacity", function(d) { return k * d.r > 20 ? 1 : 0; });
+          .attr("x", function(d) { return x(d.x); })
+          .attr("y", function(d) { return y(d.y); })
+          .style("opacity", function(d) { return k * d.r > 20 ? 1 : 0; });
 
         node = d;
         d3.event.stopPropagation();
@@ -58,7 +58,7 @@ function hierarchyPack () {
 
       scope.$watch('nodes', function () {
         if ( scope.nodes ) {
-          node = root = scope.nodes;
+          node = root = angular.copy(scope.nodes);
 
           var nodes = pack.nodes(root);
 
