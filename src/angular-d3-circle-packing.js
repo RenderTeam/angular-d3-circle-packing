@@ -32,7 +32,9 @@ function circlePacking () {
         t.selectAll("text")
           .attr("x", function(d) { return x(d.x); })
           .attr("y", function(d) { return y(d.y); })
-          .style("opacity", function(d) { return k * d.r > 20 ? 1 : 0; });
+          .style("opacity", function(node) {
+            return node.depth === d.depth + 1 ? 1 : 0;
+          });
 
         node = d;
         d3.event.stopPropagation();
@@ -68,7 +70,7 @@ function circlePacking () {
               .attr("cx", function(d) { return d.x; })
               .attr("cy", function(d) { return d.y; })
               .attr("r", function(d) { return d.r; })
-              .on("click", function(d) { return zoom(node == d ? root : d); });
+              .on("click", function(d) { return zoom(node === d ? root : d); });
 
           vis.selectAll("text")
               .data(nodes)
