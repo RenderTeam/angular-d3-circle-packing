@@ -1,8 +1,8 @@
 {
-  "name": "angular-d3-hierarchy-pack",
+  "name": "angular-d3-circle-packing",
   "version": "0.0.0",
-  "description": "Angular d3 hierarchy pack",
-  "main": "angular-d3-hierarchy-pack.js",
+  "description": "Angular d3 circle packing",
+  "main": "angular-d3-circle-packing.js",
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -12,5 +12,5 @@
     "grunt-contrib-less": "^0.11.2",
     "grunt-contrib-uglify": "^0.5.0"
   },
-  "homepage": "https://github.com/RenderTeam/d3-hierachy-pack"
+  "homepage": "https://github.com/RenderTeam/angular-d3-circle-packing"
 }

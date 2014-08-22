@@ -2,13 +2,13 @@
  /* global angular, $, d3, window */
 'use strict';
 
-var app = angular.module( 'renderteam.hierarchyPack', []);
-app.directive( 'hierarchyPack', hierarchyPack );
+var app = angular.module( 'renderteam.circlePacking', []);
+app.directive( 'circlePacking', circlePacking );
 
-hierarchyPack.$inject = [];
-function hierarchyPack () {
+circlePacking.$inject = [];
+function circlePacking () {
   return {
-    restrict: 'AE',
+    restrict: 'E',
     scope: {
       width:  '=',
       height: '=',
@@ -49,8 +49,7 @@ function hierarchyPack () {
       var pack = d3.layout.pack()
           .size([r, r])
           .value(function(d) { return d.size; });
-      element.append('<div id="chart">');
-      var vis = d3.select("#chart").insert("svg:svg", "h2")
+      var vis = d3.select("circle-packing").insert("svg:svg", "h2")
           .attr("width", w)
           .attr("height", h)
         .append("svg:g")

@@ -4,29 +4,10 @@
 module.exports = function ( grunt ) {
   // Project configuration.
   grunt.initConfig({
-    jade: {
-      compile: {
-        options: {
-          data: {
-            debug: false
-          }
-        },
-         files: [
-          {
-            expand: true,
-            cwd: 'src/templates/',
-            src: ['**/*.jade'],
-            dest: 'build/templates/',
-            ext: '.html',
-            extDot: 'first'
-          },
-        ],
-      }
-    },
     jshint  : {
       all     : [
         'Gruntfile.js',
-        'angular-d3-hierarchy-pack.js'
+        'angular-d3-circle-packing.js'
       ]
     },
     less: {
@@ -35,20 +16,19 @@ module.exports = function ( grunt ) {
           cleancss: true
         },
         files: {
-          'build/css/angular-d3-hierarchy-pack.css': ['src/less/angular-d3-hierarchy-pack.less']
+          'build/css/angular-d3-circle-packing.min.css': ['src/less/angular-d3-circle-packing.less']
         }
       }
     },
     uglify: {
       my_target: {
         files: {
-          'build/angular-d3-hierarchy-pack.min.js': ['src/angular-d3-hierarchy-pack.js']
+          'build/angular-d3-circle-packing.min.js': ['src/angular-d3-circle-packing.js']
         }
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -56,7 +36,6 @@ module.exports = function ( grunt ) {
     // Default task(s).
   grunt.registerTask('default', [
       'jshint',
-      'jade',
       'less',
       'uglify'
     ]

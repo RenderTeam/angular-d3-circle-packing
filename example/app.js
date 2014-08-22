@@ -1,4 +1,4 @@
-var app = angular.module( 'Example', ['renderteam.hierarchyPack']);
+var app = angular.module( 'Example', ['renderteam.circlePacking']);
 
 app.controller( 'Main', main );
 main.$inject = ['$scope'];
