@@ -81,7 +81,7 @@ function circlePacking () {
               .attr("dy", ".35em")
               .attr("text-anchor", "middle")
               .style("opacity", function(d) {
-                return node.depth === 1;
+                return d.depth === 1 ? 1:0;
               })
               .text(function(d) { return d.name; });
 
