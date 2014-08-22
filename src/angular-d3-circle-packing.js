@@ -80,7 +80,9 @@ function circlePacking () {
               .attr("y", function(d) { return d.y; })
               .attr("dy", ".35em")
               .attr("text-anchor", "middle")
-              .style("opacity", function(d) { return d.r > 20 ? 1 : 0; })
+              .style("opacity", function(d) {
+                return node.depth === 1;
+              })
               .text(function(d) { return d.name; });
 
           d3.select(window).on("click", function() { zoom(root); });
